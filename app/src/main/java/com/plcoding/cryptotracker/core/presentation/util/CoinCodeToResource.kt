@@ -1,6 +1,5 @@
-package com.plcoding.cryptotracker.util
+package com.plcoding.cryptotracker.core.presentation.util
 
-import androidx.annotation.DrawableRes
 import com.plcoding.cryptotracker.R
 
 fun getDrawableIdForCoin(symbol: String): Int {
