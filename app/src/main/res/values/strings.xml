@@ -6,4 +6,7 @@
     <string name="error_server_error">Server Error</string>
     <string name="error_serialization">Looks like app has error.</string>
     <string name="error_unknown">Aplikasi error. Report to developer!</string>
+    <string name="marker_cap">Market Cap</string>
+    <string name="price">Price</string>
+    <string name="change_last_24h">Change last 24h</string>
 </resources>
