@@ -5,3 +5,5 @@ import com.plcoding.cryptotracker.crypto.presentation.models.CoinUi
 sealed interface CoinListAction
 
 data class OnCoinCLicked(val coinUi: CoinUi): CoinListAction
+
+data object OnBack : CoinListAction

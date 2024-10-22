@@ -3,6 +3,7 @@ package com.plcoding.cryptotracker
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,6 +19,7 @@ import com.plcoding.cryptotracker.crypto.presentation.coin_detail.CoinDetailScre
 import com.plcoding.cryptotracker.crypto.presentation.coin_list.CoinListEvent
 import com.plcoding.cryptotracker.crypto.presentation.coin_list.CoinListScreen
 import com.plcoding.cryptotracker.crypto.presentation.coin_list.CoinListViewModel
+import com.plcoding.cryptotracker.crypto.presentation.coin_list.OnBack
 import com.plcoding.cryptotracker.ui.theme.CryptoTrackerTheme
 import org.koin.androidx.compose.koinViewModel
 
@@ -50,6 +52,9 @@ class MainActivity : ComponentActivity() {
                     when {
                         state.selectedCoin != null -> {
                             CoinDetailScreen(state, modifier = Modifier.padding(innerPadding))
+                            BackHandler {
+                               viewModel.onAction(OnBack)
+                            }
                         }
 
                         else -> {
